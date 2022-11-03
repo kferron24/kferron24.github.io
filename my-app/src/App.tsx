@@ -1,26 +1,52 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect, useState } from "react";
+import BackGround from "./views/BackGround";
+import { getRotation, Rotate } from "./helpers/getRotation";
+import Education from "./views/Education";
+import Work from "./views/Work";
+import Academic from "./views/Academic";
+import Home from "./views/Home";
 
-function App() {
+const App = () => {
+  const [rotate, useRotate] = useState<Rotate>({
+    r1: "",
+    r2: "rotate-90-",
+    r3: "rotate-180-",
+    r4: "rotate-270-",
+  });
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+      const newHeight = window.innerHeight;
+      setHeight(newHeight);
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
+
+  const fullScreen = width <= 1530 || height <= 550 ? false : true;
+  const mobile = width <= 600 ? true : false;
+
+  const HandleRotate = (index: number) => {
+    const r: Rotate = getRotation(index);
+    useRotate(r);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          In coming ...
-        </a>
-      </header>
+    <div>
+      <BackGround rotate={rotate} handleRotate={HandleRotate} mobile={mobile} />
+      <Home rotate={rotate} fullScreen={fullScreen} mobile={mobile} />
+      <Education rotate={rotate} fullScreen={fullScreen} mobile={mobile} />
+      <Work rotate={rotate} fullScreen={fullScreen} mobile={mobile} />
+      <Academic rotate={rotate} fullScreen={fullScreen} mobile={mobile} />
     </div>
   );
-}
+};
 
 export default App;
