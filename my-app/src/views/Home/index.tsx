@@ -1,6 +1,10 @@
+import Contact from "./Contact";
+import DisplaySkills from "./Skills/DisplaySkills";
+import { GiSwordman } from "react-icons/gi";
+import Infos from "./Infos";
+import Miscellaneous from "./Miscellaneous";
 import { Rotate } from "../../helpers/getRotation";
 import Synthese from "../../commons/Synthese";
-import DisplaySkills from "./DisplaySkills";
 
 interface Props {
   rotate: Rotate;
@@ -22,18 +26,20 @@ const Home = (props: Props) => {
           "Full Stack Developper",
           "UX Enthusiast",
         ]}
+        icon={
+          <GiSwordman
+            color="white"
+            size={`${fullScreen ? 160 : 80}`}
+            className={`${
+              fullScreen ? "top-[22.5%]" : "top-[60%]"
+            } absolute right-[5%] top-[22.5%] opacity-90`}
+          />
+        }
       />
       <DisplaySkills mobile={mobile} rotateValue={rotate.r1} />
-      {/* <div
-        className={`transition duration-2000 ease-out flex items-center decoration-black justify-center ${
-          rotate.r1 !== "" && "translate-x-[200%]"
-        } ${
-          fullScreen ? " ml-[51.5%] mt-28 z-30" : "mx-[12.5%] mt-20"
-        } w-[578px] h-[300px] absolute  
-          bg-white border-8 border-medium-green`}
-      >
-        <span>In coming ...</span>
-      </div> */}
+      <Miscellaneous mobile={mobile} rotateValue={rotate.r1} />
+      <Contact mobile={mobile} rotateValue={rotate.r1} />
+      <Infos mobile={mobile} rotateValue={rotate.r1} />
     </>
   );
 };

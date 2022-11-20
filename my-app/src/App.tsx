@@ -1,10 +1,13 @@
+import "@fontsource/aileron";
+
 import React, { useEffect, useState } from "react";
-import BackGround from "./views/BackGround";
-import { getRotation, Rotate } from "./helpers/getRotation";
-import Education from "./views/Education";
-import Work from "./views/Work";
+import { Rotate, getRotation } from "./helpers/getRotation";
+
 import Academic from "./views/Academic";
+import BackGround from "./views/BackGround";
+import Education from "./views/Education";
 import Home from "./views/Home";
+import Work from "./views/Work";
 
 const App = () => {
   const [rotate, useRotate] = useState<Rotate>({

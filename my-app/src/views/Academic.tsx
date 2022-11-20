@@ -1,6 +1,7 @@
+import { GiCaveman } from "react-icons/gi";
 import React from "react";
-import Synthese from "../commons/Synthese";
 import { Rotate } from "../helpers/getRotation";
+import Synthese from "../commons/Synthese";
 
 interface Props {
   rotate: Rotate;
@@ -17,6 +18,15 @@ const Academic = (props: Props) => {
       mobile={mobile}
       pageName={"Academic Project"}
       infos={["In coming", "", ""]}
+      icon={
+        <GiCaveman
+          color="white"
+          size={`${fullScreen ? 160 : 80}`}
+          className={`${
+            fullScreen ? "top-[22.5%]" : "top-[60%]"
+          } absolute right-[5%] top-[22.5%] opacity-90`}
+        />
+      }
     />
   );
 };

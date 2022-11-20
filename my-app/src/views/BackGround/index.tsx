@@ -1,7 +1,7 @@
-import bodyBackGround from "../../Body.png";
 import { Rotate } from "../../helpers/getRotation";
-import logo from "../../LOGO.png";
 import Topbar from "./Topbar";
+import bodyBackGround from "../../Body.png";
+import logo from "../../LOGO.png";
 
 interface Props {
   rotate: Rotate;

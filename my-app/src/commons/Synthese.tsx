@@ -7,10 +7,11 @@ interface Props {
   pageName: string;
   infos?: string[];
   children?: React.ReactNode;
+  icon?: JSX.Element;
 }
 
 const Synthese = (props: Props) => {
-  const { rotateValue, fullScreen, mobile, pageName, infos } = props;
+  const { rotateValue, fullScreen, mobile, pageName, infos, icon } = props;
 
   const infosBis: string[] = infos ?? ["", "", ""];
 
@@ -23,10 +24,10 @@ const Synthese = (props: Props) => {
           rotateValue !== "" && rotateValue !== "rotate-360" && "opacity-0"
         } `}
       >
-        <div className="w-9/12  bg-medium-green absolute shadow-synthese mt-20 rounded-lg mx-[12.5%]">
+        <div className="w-9/12 bg-medium-green backdrop-filter backdrop-blur-sm bg-opacity-90 absolute shadow-synthese mt-20 rounded-lg mx-[12.5%]">
           <div
             className={`uppercase ${
-              mobile ? "text-xl ml-40 pb-12 pt-16" : "text-5xl ml-48 py-12"
+              mobile ? "text-xl ml-36 pb-12 pt-16" : "text-5xl ml-48 py-12"
             } text-white py-12`}
           >
             <span>{pageName}</span>
@@ -45,6 +46,7 @@ const Synthese = (props: Props) => {
               );
             })}
           </div>
+          {!mobile && icon}
         </div>
         {fullScreen && (
           <>

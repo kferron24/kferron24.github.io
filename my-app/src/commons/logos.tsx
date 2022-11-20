@@ -1,4 +1,4 @@
-import { Logo } from "./Skills";
+import { Logo } from "../views/Home/Skills/Skills";
 
 export const logosMain: Logo[] = [
   { img: "react", name: "React", link: "" },
@@ -29,5 +29,26 @@ export const logosOther: Logo[] = [
 export const languages: Logo[] = [
   { img: "france", name: "Native", link: "" },
   { img: "england", name: "Fluent, Toeic 865", link: "" },
-  { img: "japan", name: "Intermediate", link: "" },
+  { img: "germany", name: "Intermediate", link: "" },
+  { img: "japan", name: "Beginner", link: "" },
+];
+
+export const miscellaneous1: Logo[] = [
+  { img: "skydiver", name: "Thrills", link: "" },
+  { img: "shoes", name: "Run", link: "" },
+  { img: "sports", name: "Team sports", link: "" },
+  { img: "children", name: "Youth Animation", link: "" },
+];
+
+export const miscellaneous2: Logo[] = [
+  { img: "animation", name: "Animation", link: "" },
+  { img: "manga", name: "Manga", link: "" },
+  { img: "music", name: "Music", link: "" },
+  { img: "design", name: "Design", link: "" },
+];
+
+export const contacts: Logo[] = [
+  { img: "phone", name: "+33629904628", link: "" },
+  { img: "mail", name: "kylian.ferron@gmail.com", link: "" },
+  { img: "home", name: "Bordeaux 33000, France", link: "" },
 ];

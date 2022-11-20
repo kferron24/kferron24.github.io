@@ -22,7 +22,7 @@ const Topbar = (props: Props) => {
 
         return (
           <div
-            className={`hover:border-[#5A786F] hover:border-4  ${
+            className={`hover:border-[#5A786F] cursor-pointer hover:border-4  ${
               (rotate[r] === "" || rotate[r] === "rotate-360") &&
               "bg-medium-green "
             } z-50 uppercase h-24 ${
@@ -31,7 +31,7 @@ const Topbar = (props: Props) => {
             key={t}
             onClick={() => handleRotate(index)}
           >
-            {t}
+            <p className="text-center font-medium">{t}</p>
           </div>
         );
       })}

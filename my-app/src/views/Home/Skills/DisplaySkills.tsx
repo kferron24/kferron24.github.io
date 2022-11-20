@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { languages, logosMain, logosOther } from "./logos";
+import { languages, logosMain, logosOther } from "../../../commons/logos";
+
 import Skills from "./Skills";
+import { useState } from "react";
 
 type Props = {
   mobile: boolean;
@@ -21,7 +22,7 @@ const DisplaySkills = (props: Props) => {
       <div
         className={` flex flex-col absolute justify-around justify-items-center items-center rounded-t-lg bg-medium-green h-96 ${
           mobile ? "w-36 mt-[380px]" : "w-48 mt-[440px]"
-        } text-3xl text-white font-normal ml-[12.5%]  z-30`}
+        } text-3xl font-medium italic ml-[12.5%]  z-30`}
       >
         {skills.map((skill, index) => {
           return (
@@ -29,7 +30,7 @@ const DisplaySkills = (props: Props) => {
               className={`hover:border-2 hover:border-[#323E45] ${
                 skillsDisplay === Number(index) &&
                 "bg-regular-green border-2 border-[#323E45]"
-              } items-center justify-center w-full z-50 uppercase h-32 first:rounded-tl-lg ${
+              } items-center cursor-pointer justify-center w-full z-50 uppercase h-32 first:rounded-tl-lg ${
                 mobile ? "text-xl" : "text-3xl"
               } flex  px-5 shrink-0`}
               onClick={() => setSkillsDisplay(Number(index))}

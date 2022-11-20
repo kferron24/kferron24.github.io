@@ -13,7 +13,7 @@ const Skills = (props: Props) => {
   const { logos, mobile } = props;
   return (
     <div
-      className={`scrollSkills flex flex-nowrap items-center bg-regular-green  absolute  w-9/12 h-[392px] ${
+      className={`scrollSkills flex flex-nowrap items-center bg-regular-green absolute  w-9/12 h-[392px] ${
         mobile ? "mt-[380px] pl-36" : "mt-[440px] pl-48"
       }  mx-[12.5%] rounded-lg overflow-auto `}
     >
