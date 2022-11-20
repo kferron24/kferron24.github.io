@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.eba5378b.css",
-    "main.js": "/static/js/main.5d0d6f12.js",
+    "main.css": "/static/css/main.0a49a90d.css",
+    "main.js": "/static/js/main.95a871f4.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Body.png": "/static/media/Body.e678161b930df8f6038a.png",
+    "static/media/aileron-latin-400-normal.woff": "/static/media/aileron-latin-400-normal.36ddf8acddc786506154.woff",
+    "static/media/aileron-latin-400-normal.woff2": "/static/media/aileron-latin-400-normal.a0168083f435b75f0e4a.woff2",
     "index.html": "/index.html",
-    "main.eba5378b.css.map": "/static/css/main.eba5378b.css.map",
-    "main.5d0d6f12.js.map": "/static/js/main.5d0d6f12.js.map",
+    "main.0a49a90d.css.map": "/static/css/main.0a49a90d.css.map",
+    "main.95a871f4.js.map": "/static/js/main.95a871f4.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eba5378b.css",
-    "static/js/main.5d0d6f12.js"
+    "static/css/main.0a49a90d.css",
+    "static/js/main.95a871f4.js"
   ]
 }
